@@ -1,0 +1,23 @@
+<% include partials/header.ejs %>
+
+<h1><%= title %></h1>
+<form method="post">
+    <div class='form-group'>
+        <label for='title' class='col-sm-2 control-label'>Title:</label>
+        <input type='text' name='title' id='title' required value="<%= game.title %>"/>
+    </div>
+    <div class='form-group'>
+        <label for='publisher' class='col-sm-2 control-label'>Publisher:</label>
+        <input type='text' name='publisher' id='publisher' value="<%= game.publisher %>"/>
+    </div>
+    <div class='form-group'>
+        <label for='genre' class='col-sm-2 control-label'>Genre:</label>
+        <input type='text' name='genre' id='genre' required value="<%= game.genre %>"/>
+    </div>
+    <div class='form-group'>
+        <label for='year' class='col-sm-2 control-label'>Year:</label>
+        <input type='number' name='year' id='year' required value="<%= game.year %>"/>
+    </div>
+    <button type='submit' >Submit Edits</button>
+</form>
+<% include partials/footer.ejs %>
